@@ -4,6 +4,6 @@ import { IntroComponent } from '../intro/intro.component';
 
 export const HOME_PAGE_ROUTE: Route[] = [
     { path: 'home', loadComponent: () => import('../intro/intro.component').then(c => c.IntroComponent) },
+    { path: 'products', loadComponent: () => import('../products/products.component').then(c => c.ProductsComponent) },
     { path: '', redirectTo: '/home', pathMatch: 'full' },
-
 ]

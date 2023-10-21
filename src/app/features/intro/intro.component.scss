@@ -8,6 +8,7 @@
 
     .left-container {
         @include flex($direction: column);
+        padding: 60px 0;
 
         .top-content {
             height: 187px;

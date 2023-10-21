@@ -6,7 +6,7 @@ export const APP_ROUTE: Route[] = [
         path: '',
         component: HomePageComponent,
         loadChildren: () => import('./features/home-page/home-page.route').then((m) => m.HOME_PAGE_ROUTE),
-    }
+    },
 ];
 
 
