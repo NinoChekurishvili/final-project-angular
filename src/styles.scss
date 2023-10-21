@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+@import './styles/palette.scss';
+@import './styles/mixins';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    vertical-align: baseline;
+}

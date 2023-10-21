@@ -1,0 +1,24 @@
+@import 'src/styles/palette';
+@import 'src/styles/mixins';
+
+.header {
+    background-color: $primary-background-color;
+    padding: 1.5em;
+    @include flex;
+    align-items: center;
+
+    .header-list {
+        @include flex(center);
+        gap: 1em;
+
+        li {
+            @include font-settings();
+            cursor: pointer;
+        }
+    }
+
+    .icons {
+        @include flex;
+        gap: 1em;
+    }
+}

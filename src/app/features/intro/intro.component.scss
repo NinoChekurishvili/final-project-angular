@@ -1,0 +1,36 @@
+@import 'src/styles/palette';
+@import 'src/styles/mixins';
+
+.intro-container {
+    background-color: $primary-background-color;
+    padding: 60px 80px;
+    @include flex;
+
+    .left-container {
+        @include flex($direction: column);
+
+        .top-content {
+            height: 187px;
+            @include flex($direction: column);
+
+            h2 {
+                max-width: 513px;
+                line-height: 140%;
+                @include font-settings(32px, 700, $primary)
+            }
+        }
+    }
+
+    p {
+        max-width: 600px;
+        line-height: 150%;
+        @include font-settings(18px)
+    }
+
+    .right-container {
+        img {
+            height: 584px;
+            width: 520px;
+        }
+    }
+}

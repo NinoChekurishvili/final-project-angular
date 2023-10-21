@@ -1,0 +1,13 @@
+@import 'src/styles/palette';
+
+@mixin flex ($justify-content: space-between, $direction: row) {
+    display: flex;
+    justify-content: $justify-content;
+    flex-direction: $direction;
+}
+
+@mixin font-settings($size: 16px, $weight: normal, $color: $black) {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
