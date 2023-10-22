@@ -1,0 +1,8 @@
+<div class="product-container">
+    <div *ngFor="let product of products" class="product">
+        <img [src]="'assets/lighting/' + product.InternalArticle + '.png'" alt="">
+        <h2>{{product.Name}}</h2>
+        <span>{{product.Price}} EUR</span>
+    </div>
+
+</div>

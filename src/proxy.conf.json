@@ -2,9 +2,6 @@
     "/sm/o/Balance/4543/hs/Exchange": {
         "target": "https://cloud.balance.ge",
         "secure": true,
-        "changeOrigin": true,
-        "headers": {
-            "Authorization": "bmNoZWt1cmlzaHZpbGlAYmFsYW5jZS5nZTpOaW5pa28xMjM="
-        }
+        "changeOrigin": true
     }
 }

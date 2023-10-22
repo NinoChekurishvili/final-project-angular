@@ -16,14 +16,21 @@
 
         div {
             max-width: 235px;
-            height: 124px;
+            height: 115px;
             @include flex($direction: column);
-            @include font-settings($weight: 400, $color: $primary-dark);
+
+            @include font-settings($size: 18px, $weight: 400, $color: $black);
+
+            p {
+                font-size: 15px;
+                height: 48px;
+            }
 
             img {
-                height: 20px;
                 width: 20px;
+                height: 20px;
             }
         }
+
     }
 }

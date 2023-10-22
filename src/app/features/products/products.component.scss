@@ -1,0 +1,20 @@
+@import 'src/styles/palette';
+@import 'src/styles/mixins';
+
+.product-container {
+    background-color: $primary-background-color;
+    padding: 0 80px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 0 auto;
+
+    .product {
+        img {
+            max-width: 305px;
+            height: 375px;
+
+        }
+    }
+
+}

@@ -7,13 +7,7 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [CommonModule],
   template: `<button (click)="navigateToProducts()">View collection</button>`,
-  styles: [`
-    button {
-      display: flex;
-      padding: 16px 32px;
-    gap: 10px;
-}
-  `]
+  styleUrls: ['./button.component.scss']
 })
 export class ButtonComponent {
 

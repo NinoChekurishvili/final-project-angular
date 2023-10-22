@@ -20,5 +20,6 @@
     .icons {
         @include flex;
         gap: 1em;
+        cursor: pointer;
     }
 }

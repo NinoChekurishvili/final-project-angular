@@ -3,11 +3,12 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 export interface Product {
-  uid: string;
+  InternalArticle: string;
   Name: string;
   Unit: string;
+  AdditionalRequisites1: string;
   Weight: string;
-  UnitCost: string;
+  Price: number;
 }
 
 @Injectable()
@@ -19,5 +20,7 @@ export class ProductService {
 
   getProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(this.apiUrl);
+
+
   }
 }
