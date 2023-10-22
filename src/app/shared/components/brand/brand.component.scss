@@ -1,0 +1,29 @@
+@import 'src/styles/palette';
+@import 'src/styles/mixins';
+
+.brand-container {
+    background-color: $primary-background-color;
+    padding: 60px 80px;
+
+    h3 {
+        text-align: center;
+        margin-bottom: 60px;
+        @include font-settings(24px, 400, $primary-dark)
+    }
+
+    .brand-content {
+        @include flex;
+
+        div {
+            max-width: 235px;
+            height: 124px;
+            @include flex($direction: column);
+            @include font-settings($weight: 400, $color: $primary-dark);
+
+            img {
+                height: 20px;
+                width: 20px;
+            }
+        }
+    }
+}
