@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 
@@ -6,13 +6,20 @@ import { Router } from '@angular/router';
   selector: 'app-button',
   standalone: true,
   imports: [CommonModule],
-  template: `<button (click)="navigateToProducts()">View collection</button>`,
+  template: `<button (click)="handleClick()">{{ buttonText }}</button>`,
   styleUrls: ['./button.component.scss']
 })
 export class ButtonComponent {
+  @Input() buttonText: string = '';
+  @Input() navigationPath: string | null = null;
+  @Output() buttonClick: EventEmitter<void> = new EventEmitter<void>();
 
   constructor(private router: Router) { }
-  navigateToProducts() {
-    this.router.navigate(['/products'])
+
+  handleClick() {
+    if (this.navigationPath) {
+      this.router.navigate([this.navigationPath]);
+    }
+    this.buttonClick.emit();
   }
 }

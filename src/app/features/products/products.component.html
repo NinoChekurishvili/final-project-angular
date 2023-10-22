@@ -1,8 +1,15 @@
-<div class="product-container">
-    <div *ngFor="let product of products" class="product">
-        <img [src]="'assets/lighting/' + product.InternalArticle + '.png'" alt="">
-        <h2>{{product.Name}}</h2>
-        <span>{{product.Price}} EUR</span>
+<div class="products-content">
+    <div class="product-container">
+        <div *ngFor="let product of displayProducts" class="product">
+            <img [src]="'assets/lighting/' + product.InternalArticle + '.png'" alt="">
+            <div class="product-info">
+                <h2>{{product.Name}}</h2>
+                <span>{{product.Price}} EUR</span>
+            </div>
+
+        </div>
     </div>
+
+    <app-button buttonText='Load more' *ngIf="moreToLoad()" (click)="loadMore()"></app-button>
 
 </div>

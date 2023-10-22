@@ -11,13 +11,13 @@
         padding: 60px 0;
 
         .top-content {
-            height: 187px;
+            height: 300px;
             @include flex($direction: column);
 
             h2 {
                 max-width: 513px;
                 line-height: 140%;
-                @include font-settings(32px, 700, $primary)
+                @include font-settings(42px, 700, $primary)
             }
         }
     }
