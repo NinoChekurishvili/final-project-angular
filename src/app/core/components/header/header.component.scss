@@ -2,7 +2,7 @@
 @import 'src/styles/mixins';
 
 .header {
-    background-color: $primary-background-color;
+    height: 60px;
     padding: 1.5em;
     @include flex;
     align-items: center;
@@ -13,13 +13,14 @@
 
         li {
             @include font-settings();
+            text-transform: uppercase;
             cursor: pointer;
         }
     }
 
-    .icons {
-        @include flex;
-        gap: 1em;
+    span {
+        text-transform: uppercase;
         cursor: pointer;
+        margin-right: 1em;
     }
 }

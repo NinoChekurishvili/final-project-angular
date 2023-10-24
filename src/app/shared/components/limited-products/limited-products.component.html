@@ -1,0 +1,10 @@
+<div class="limited-product-container">
+    <div class="products-content">
+        <div *ngFor="let product of products" class="product">
+            <img [src]="'assets/lighting/' + product.InternalArticle + '.png'" alt="">
+            <h2>{{product.Name}}</h2>
+        </div>
+    </div>
+    <app-button buttonText="Show More" navigationPath="/products"></app-button>
+
+</div>

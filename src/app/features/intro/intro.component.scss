@@ -2,13 +2,12 @@
 @import 'src/styles/mixins';
 
 .intro-container {
-    background-color: $primary-background-color;
-    padding: 60px 80px;
+
     @include flex;
 
     .left-container {
         @include flex($direction: column);
-        padding: 60px 0;
+        padding: 60px 80px;
 
         .top-content {
             height: 300px;
@@ -29,9 +28,8 @@
     }
 
     .right-container {
-        img {
-            height: 584px;
-            width: 520px;
-        }
+        background-image: url('../../../assets/images/registration.jpeg');
+        @include background-image;
     }
+
 }

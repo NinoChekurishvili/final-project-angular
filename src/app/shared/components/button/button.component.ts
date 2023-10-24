@@ -1,13 +1,14 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, UpperCasePipe } from '@angular/common';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-button',
   standalone: true,
-  imports: [CommonModule],
-  template: `<button (click)="handleClick()">{{ buttonText }}</button>`,
-  styleUrls: ['./button.component.scss']
+  imports: [CommonModule, UpperCasePipe],
+  template: `<button (click)="handleClick()">{{ buttonText|uppercase }}</button>`,
+  styleUrls: ['./button.component.scss'],
+
 })
 export class ButtonComponent {
   @Input() buttonText: string = '';

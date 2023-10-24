@@ -11,3 +11,16 @@
     font-weight: $weight;
     color: $color;
 }
+
+@mixin border($border-color: $border-color) {
+    border: 1px solid;
+    border-color: $border-color;
+}
+
+@mixin background-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 50%;
+    height: calc(100vh - 60px);
+}
