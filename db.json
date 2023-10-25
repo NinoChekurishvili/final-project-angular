@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "email": "nin@gmail.com",
+      "password": "test123",
+      "name": "nino",
+      "surname": "chekurishvili",
+      "telephone": "123123",
+      "id": 1
+    },
+    {
+      "email": "n@n",
+      "password": "ninniko111",
+      "name": "n",
+      "surname": "nini",
+      "telephone": "44555",
+      "id": 2
+    },
+    {
+      "email": "n@mm",
+      "password": "nininini",
+      "name": "mmkmk",
+      "surname": "mkmkmk",
+      "telephone": "123123",
+      "id": 3
+    }
+  ]
+}

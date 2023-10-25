@@ -40,10 +40,14 @@
             }
 
             .text-validation {
-                height: 50px;
+                height: 20px;
                 @include font-settings(10px, 400, $error-color);
                 position: absolute;
 
+            }
+
+            .error-message {
+                @include font-settings(10px, 400, $error-color);
             }
 
             .phoneNumber {

@@ -41,7 +41,6 @@ export const EUROPEAN_COUNTRIES = [
   { "name": "Poland", "prefix": "+48" },
   { "name": "Portugal", "prefix": "+351" },
   { "name": "Romania", "prefix": "+40" },
-  { "name": "Russia", "prefix": "+7" },
   { "name": "San Marino", "prefix": "+378" },
   { "name": "Serbia", "prefix": "+381" },
   { "name": "Slovakia", "prefix": "+421" },
