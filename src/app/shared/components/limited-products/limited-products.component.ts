@@ -4,8 +4,6 @@ import { Product, ProductService } from 'src/app/features/products/products.serv
 import { Router } from '@angular/router';
 import { ButtonComponent } from '../button/button.component';
 
-
-
 @Component({
   selector: 'app-limited-products',
   standalone: true,
@@ -16,21 +14,16 @@ import { ButtonComponent } from '../button/button.component';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 
-
 export class LimitedProductsComponent implements OnInit {
   products: Product[] = [];
 
-
   constructor(private productService: ProductService, private router: Router, private cd: ChangeDetectorRef) { }
-
 
   ngOnInit(): void {
     this.productService.getProducts().subscribe(products => {
       this.products = products.slice(0, 4);
-
       this.cd.detectChanges();
       console.log(products);
-
     });
   }
 }

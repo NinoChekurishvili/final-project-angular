@@ -2,11 +2,11 @@
 @import 'src/styles/mixins';
 
 .brand-container {
-    padding: 60px 80px;
+    padding: 100px 80px;
 
     h3 {
         text-align: center;
-        margin-bottom: 60px;
+        margin-bottom: 80px;
         @include font-settings(24px, 400, $primary-dark)
     }
 

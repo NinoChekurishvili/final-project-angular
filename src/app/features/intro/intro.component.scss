@@ -2,34 +2,53 @@
 @import 'src/styles/mixins';
 
 .intro-container {
+    height: calc(100vh - 60px);
+    @include flex();
+    position: relative;
 
-    @include flex;
+    h2 {
+        // max-width: 400px;
+        line-height: 140%;
+        @include font-settings(9em, 900, $primary);
+        position: absolute;
+    }
+
+    .top-title {
+        top: 0.8em;
+        left: 3em;
+    }
+
+    .bottom-title {
+        bottom: 0.8em;
+        right: 2em;
+    }
 
     .left-container {
-        @include flex($direction: column);
-        padding: 60px 80px;
-
-        .top-content {
-            height: 300px;
-            @include flex($direction: column);
-
-            h2 {
-                max-width: 513px;
-                line-height: 140%;
-                @include font-settings(42px, 700, $primary)
-            }
-        }
-    }
-
-    p {
-        max-width: 600px;
-        line-height: 150%;
-        @include font-settings(18px)
-    }
-
-    .right-container {
-        background-image: url('../../../assets/images/registration.jpeg');
+        @include flex(center, column);
+        background-image: url('../../../assets/images/homepage1.webp');
         @include background-image;
+        opacity: 100%;
+
+
+        // h1 {
+        //     max-width: 400px;
+        //     line-height: 140%;
+        //     @include font-settings(8em, 900, $primary);
+        //     position: absolute;
+        // }
+    }
+
+
+
+    .video-container {
+        height: calc(100vh - 60px);
+        display: flex;
+
+
+        video {
+            width: 30%;
+            height: calc(100vh - 60px);
+        }
     }
 
 }
