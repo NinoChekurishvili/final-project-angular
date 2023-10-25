@@ -20,18 +20,15 @@
                 <div *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid">
                     <div *ngIf="loginForm.get('password')?.errors?.['required']" class="text-validation">Required field
                     </div>
-                    <div *ngIf="loginForm.get('password')?.errors?.['minLength']" class="text-validation">Password must
-                        be
-                        at
-                        least 6
-                        characters long.</div>
+                    <div *ngIf="loginForm.get('password')?.errors?.['minlength']" class="text-validation">Password must
+                        be at least 6 characters long.</div>
                 </div>
             </div>
 
             <app-button buttonText='Log In' (click)="onSubmit"></app-button>
         </form>
         <a routerLink="/">Have you forgotten your password?</a>
-        <a routerLink="/">Need an account?</a>
+        <a routerLink="/registration">Need an account?</a>
     </div>
     <div class="image-container"></div>
 </div>

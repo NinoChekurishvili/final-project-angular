@@ -1,0 +1,82 @@
+@import 'src/styles/palette';
+@import 'src/styles/mixins';
+
+.login-container {
+    @include flex($direction: row);
+
+    .left-container {
+        @include flex($direction: column, $justify-content: center);
+        align-items: center;
+        margin: 0 auto;
+
+        form {
+            @include flex($direction: column, $justify-content: center);
+            align-items: center;
+            margin-bottom: 23px;
+
+            .form-group {
+                @include flex($direction: column);
+                position: relative;
+                padding-bottom: 14px
+            }
+
+            label {
+                @include font-settings(12.5px);
+                margin-bottom: 5px;
+                text-transform: uppercase;
+            }
+
+            select {
+                background-color: $primary-background-color;
+            }
+
+
+            .form-control {
+                width: 340px;
+                height: 40px;
+                @include font-settings(14px, $black);
+                @include border($border-color: $black);
+
+            }
+
+            .text-validation {
+                height: 50px;
+                @include font-settings(10px, 400, $error-color);
+                position: absolute;
+
+            }
+
+            .phoneNumber {
+                width: 340px;
+                height: 40px;
+                @include border($border-color: $black);
+
+                .prefix {
+                    height: 100%;
+                    display: inline-block;
+                    width: 15%;
+                }
+            }
+
+            ::ng-deep app-button button {
+                padding: 12px 40px;
+                margin-top: 17px;
+                width: 340px;
+                font-size: 15px;
+                border-color: $black ;
+            }
+        }
+
+        a {
+            text-decoration: underline;
+            margin-bottom: 10px;
+            @include font-settings(12px);
+            cursor: pointer;
+        }
+    }
+
+    .image-container {
+        background-image: url('../../../assets/images/registration.jpeg');
+        @include background-image
+    }
+}

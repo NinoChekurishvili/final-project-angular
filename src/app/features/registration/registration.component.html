@@ -1,0 +1,87 @@
+<div class="login-container">
+    <div class="left-container">
+        <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" formControlName="email" class="form-control">
+                <div *ngIf="registrationForm.get('email')?.touched && registrationForm.get('email')?.invalid">
+                    <div *ngIf="registrationForm.get('email')?.errors?.['required']" class="text-validation">Required
+                        field
+                    </div>
+                    <div *ngIf="registrationForm.get('email')?.errors?.['email']" class="text-validation">Enter a valid
+                        e-mail
+                        address.
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" formControlName="password" class="form-control">
+                <div *ngIf="registrationForm.get('password')?.touched && registrationForm.get('password')?.invalid">
+                    <div *ngIf="registrationForm.get('password')?.errors?.['required']" class="text-validation">Required
+                        field
+                    </div>
+                    <div *ngIf="registrationForm.get('password')?.errors?.['minlength']" class="text-validation">
+                        Password must
+                        be at least 6 characters long.</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" formControlName="name" class="form-control">
+                <div *ngIf="registrationForm.get('name')?.touched && registrationForm.get('name')?.invalid">
+                    <div *ngIf="registrationForm.get('name')?.errors?.['required']" class="text-validation">Required
+                        field
+                    </div>
+                    <div *ngIf="registrationForm.get('name')?.errors?.['pattern']" class="text-validation">Invalid name
+                        format.</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="surname">Surname</label>
+                <input type="text" id="surname" formControlName="surname" class="form-control">
+                <div *ngIf="registrationForm.get('surname')?.touched && registrationForm.get('surname')?.invalid">
+                    <div *ngIf="registrationForm.get('surname')?.errors?.['required']" class="text-validation">Required
+                        field
+                    </div>
+                    <div *ngIf="registrationForm.get('surname')?.errors?.['pattern']" class="text-validation">Invalid
+                        surname format.</div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label for="countries">Select Country</label>
+                <select name="countries" id="countries" (change)="onSelectCountry($event)" class="form-control">
+                    <option *ngFor="let country of countries" [value]="country.prefix">{{country.name|uppercase}}
+                    </option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="telephone">Telephone</label>
+                <div class="phoneNumber">
+                    <input type="tel" [value]="selectedPrefix" readonly class="prefix">
+                    <input type="tel" id="telephone" [maxlength]="6" formControlName="telephone">
+                </div>
+                <div *ngIf="registrationForm.get('telephone')?.touched && registrationForm.get('telephone')?.invalid">
+
+                    <div *ngIf="registrationForm.get('telephone')?.hasError('required')" class="text-validation">Phone
+                        number is
+                        required.</div>
+                    <div *ngIf="registrationForm.get('telephone')?.hasError('pattern')" class="text-validation">Please
+                        enter
+                        only numbers.</div>
+                </div>
+            </div>
+
+
+            <app-button buttonText="create account" type="submit"></app-button>
+        </form>
+
+    </div>
+    <div class="image-container"></div>
+</div>
