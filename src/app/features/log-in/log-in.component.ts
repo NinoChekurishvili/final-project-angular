@@ -42,7 +42,8 @@ export class LogInComponent implements OnInit {
 
       this.userService.login(email, password).subscribe({
         next: user => {
-          this.router.navigate(['./home']);
+          localStorage.setItem('token', Math.random().toString());
+          this.router.navigate(['/profile', user.id]);
         },
         error: error => {
           console.log(error);

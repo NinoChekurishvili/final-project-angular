@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { switchMap } from 'rxjs/operators';
+import { Router, RouterModule } from '@angular/router';
 
 import { ButtonComponent } from 'src/app/shared/components/button/button.component';
 import { EUROPEAN_COUNTRIES } from 'src/app/shared/components/country-prefixes/country-prefixes.component';
@@ -13,7 +14,7 @@ import { User } from 'src/app/shared/models/user.model';
 @Component({
   selector: 'app-registration',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, ButtonComponent, HttpClientModule],
+  imports: [CommonModule, ReactiveFormsModule, ButtonComponent, HttpClientModule, RouterModule],
   templateUrl: './registration.component.html',
   styleUrls: ['./registration.component.scss'],
   providers: [UserService],
@@ -30,6 +31,7 @@ export class RegistrationComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private userService: UserService,
+    private router: Router,
     private cdr: ChangeDetectorRef
   ) { }
 
@@ -63,11 +65,12 @@ export class RegistrationComponent implements OnInit {
         response => {
           console.log('Customer registered successfully:', response);
           this.registrationForm.reset();
+          this.router.navigate(['/login'])
         },
         (error: any) => {
           if (error.message === 'Email already registered!') {
             this.errorMessage = error.message;
-            this.cdr.markForCheck();  // Trigger change detection
+            this.cdr.markForCheck();
           } else {
             console.error('Error during registration:', error.message);
           }
@@ -75,7 +78,7 @@ export class RegistrationComponent implements OnInit {
       );
     } else if (!this.selectedPrefix) {
       this.prefixMessage = "Prefix is not selected!";
-      this.cdr.markForCheck();  // Trigger change detection
+      this.cdr.markForCheck();
       console.warn('Prefix is not selected.');
     }
   }

@@ -1,46 +1,36 @@
 {
   "users": [
     {
-      "email": "nin@gmail.com",
-      "password": "test123",
+      "email": "nino@gmail.com",
+      "password": "nino123",
       "name": "nino",
-      "surname": "chekurishvili",
+      "surname": "chek",
       "telephone": "123123",
       "id": 1
     },
     {
-      "email": "n@n",
-      "password": "ninniko111",
-      "name": "n",
-      "surname": "nini",
-      "telephone": "44555",
+      "email": "test@test",
+      "password": "test111",
+      "name": "test",
+      "surname": "test",
+      "telephone": "123123",
       "id": 2
     },
     {
-      "email": "nin@test.com",
+      "email": "test1@test",
       "password": "test123",
-      "name": "nin",
-      "surname": "chek",
+      "name": "test",
+      "surname": "test",
       "telephone": "123123",
       "id": 3
     },
     {
-      "email": "test@test",
-      "password": "niniko123",
-      "name": "nn",
-      "surname": "nn",
-      "telephone": "123454",
+      "email": "test@test1",
+      "password": "test123",
+      "name": "test",
+      "surname": "test",
+      "telephone": "123123",
       "id": 4
-    },
-    {
-      "email": "test@test",
-      "password": "niniko123",
-      "id": 5
-    },
-    {
-      "email": "test@test",
-      "password": "niniko123",
-      "id": 6
     }
   ]
 }
