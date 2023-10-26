@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { User } from 'src/app/shared/models/user.model'
+import { User } from 'src/app/shared/models/user.model';
+
 
 @Injectable({
   providedIn: 'root'
@@ -24,10 +25,28 @@ export class UserService {
   }
 
   getUserById(id: number): Observable<User> {
-    return this.http.get<User>('${this.apiUrl}/${id}')
+    return this.http.get<User>(`${this.apiUrl}/${id}`)
+  }
+  login(email: string, password: string): Observable<User> {
+    return this.http.post<User>(`http://localhost:3000/users`, { email, password });
   }
 
+  logout(): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}/logout`, {});
+  }
 
+  setAuthToken(token: string): void {
+    localStorage.setItem('authToken', token);
+  }
+  getAuthToken(): string | null {
+    return localStorage.getItem('authToken');
+  }
+  isLoggedIn(): boolean {
+    return !!this.getAuthToken();
+  }
+  clearAuthToken(): void {
+    localStorage.removeItem('authToken');
+  }
 
 }
 

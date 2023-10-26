@@ -17,12 +17,30 @@
       "id": 2
     },
     {
-      "email": "n@mm",
-      "password": "nininini",
-      "name": "mmkmk",
-      "surname": "mkmkmk",
+      "email": "nin@test.com",
+      "password": "test123",
+      "name": "nin",
+      "surname": "chek",
       "telephone": "123123",
       "id": 3
+    },
+    {
+      "email": "test@test",
+      "password": "niniko123",
+      "name": "nn",
+      "surname": "nn",
+      "telephone": "123454",
+      "id": 4
+    },
+    {
+      "email": "test@test",
+      "password": "niniko123",
+      "id": 5
+    },
+    {
+      "email": "test@test",
+      "password": "niniko123",
+      "id": 6
     }
   ]
 }

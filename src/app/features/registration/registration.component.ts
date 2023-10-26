@@ -62,6 +62,7 @@ export class RegistrationComponent implements OnInit {
       ).subscribe(
         response => {
           console.log('Customer registered successfully:', response);
+          this.registrationForm.reset();
         },
         (error: any) => {
           if (error.message === 'Email already registered!') {
