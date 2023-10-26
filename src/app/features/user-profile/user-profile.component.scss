@@ -1,0 +1,58 @@
+@import 'src/styles/palette';
+@import 'src/styles/mixins';
+
+.profile-container {
+    height: calc(100vh - 60px);
+    @include flex();
+
+    .profile {
+        width: 100%;
+        @include flex(center, column);
+        align-items: center;
+
+        .user {
+            @include flex (space-evenly, column);
+            @include border;
+            width: 50%;
+            height: 480px;
+            align-self: center;
+            padding: 50px;
+            margin-bottom: 20px;
+
+            h2,
+            h4 {
+                text-transform: uppercase
+            }
+
+            h2 {
+                @include font-settings(28px, 700);
+            }
+
+            h4 {
+                @include font-settings(14px);
+            }
+
+            p {
+                width: 100%;
+                border-bottom: 1px solid $border-color;
+                margin-bottom: 10px;
+            }
+        }
+
+        .links {
+            @include flex($direction: column);
+            @include font-settings(13px, $border-color);
+            text-decoration: underline;
+            width: 50%;
+            height: 40px;
+
+        }
+
+    }
+
+    video {
+        height: calc(100vh - 60px);
+        ;
+    }
+
+}

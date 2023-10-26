@@ -27,9 +27,6 @@
         @include flex(center, column);
         background-image: url('../../../assets/images/homepage1.webp');
         @include background-image;
-        opacity: 100%;
-
-
         // h1 {
         //     max-width: 400px;
         //     line-height: 140%;

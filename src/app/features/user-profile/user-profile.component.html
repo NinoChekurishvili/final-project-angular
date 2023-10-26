@@ -1,8 +1,29 @@
-<div *ngIf="user">
-    <h2>User Profile</h2>
-    <p><strong>Email:</strong> {{ user.email }}</p>
-    <p><strong>Name:</strong> {{ user.name }}</p>
-    <p><strong>Surname:</strong> {{ user.surname }}</p>
-    <p><strong>Telephone:</strong> {{ user.telephone }}</p>
+<div class="profile-container">
+
+    <video #bgVideo3 loop muted>
+        <source src="../../../assets/videos/profile.mp4" type="video/mp4">
+    </video>
+
+    <div *ngIf="user" class="profile">
+        <div class="user">
+            <h2>Profile</h2>
+            <h4>Name</h4>
+            <p>{{ user.name }}</p>
+            <h4>Surname</h4>
+            <p>{{ user.surname }}</p>
+            <h4>Email</h4>
+            <p> {{ user.email }}</p>
+            <h4>Telephone</h4>
+            <p>{{ user.telephone }}</p>
+        </div>
+        <div class="links">
+            <a href="./">Sign out</a>
+            <a href="./">Delete your account</a>
+
+        </div>
+
+    </div>
+
+
 
 </div>

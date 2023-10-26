@@ -28,8 +28,10 @@ export class UserService {
         return this.http.get<User>(`${this.apiUrl}/${id}`)
     }
     login(email: string, password: string): Observable<User> {
-        return this.http.post<User>(`${this.apiUrl}/auth/login`, { email, password });
+        return this.http.post<User>(`http://localhost:3000/auth/login`, { email, password });
     }
+
+
     logout(): Observable<any> {
         return this.http.post<any>(`${this.apiUrl}/logout`, {});
     }
